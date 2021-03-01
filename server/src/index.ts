@@ -18,20 +18,12 @@ server.get('/', (req, res) =>{
   res.send('Welcome to lead management REST API')
 });
 
-server.get('/getInvitedUsers', (req, res) => {
-  const query = 'Select * from jobs where status="new"';
-  connection.query(query, (err, rows) => {
+server.get('/getUsers/:status', (req, res) => {
+  console.log(' GET USER WITH STATUS : ', req.params.status)
+  const query = 'select j.id, status, contact_name, contact_phone, contact_email, price, description, created_at, updated_at ,c.name as "category", s.name as "suburb", postcode from jobs j join categories c on j.category_id=c.id join suburbs s on j.suburb_id=s.id where status=?'
+  connection.query(query, [req.params.status], (err, rows) => {
     if (err) throw err;
     
-    res.json(rows);
-  })
-})
-
-server.get('/getAcceptedUsers', (req, res) => {
-  const query = 'Select * from jobs where status="accepted"';
-  connection.query(query, (err, rows) => {
-    if (err) throw err;
-
     res.json(rows);
   })
 })
