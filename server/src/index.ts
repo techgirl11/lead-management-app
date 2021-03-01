@@ -7,6 +7,11 @@ const bodyParser = require('body-parser')
 
 server.use(bodyParser.json());
 
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 const connection = mysql.createConnection({
   host: '6df63889258c',
   user: 'root',
