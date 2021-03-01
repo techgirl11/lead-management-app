@@ -1,7 +1,7 @@
 import * as express from 'express';
 
 const server = express();
-const port = 8081;
+const port = 8080;
 const mysql = require('mysql')
 const bodyParser = require('body-parser')
 
