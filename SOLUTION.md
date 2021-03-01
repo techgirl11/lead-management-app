@@ -20,3 +20,8 @@ The server application port was chnaged to 8081 for local development purpose.
 The backend is implemented in nodeJS with expressJS.
 Mysql module is used to interact with the mysql db provided with the boilerplate code.
 Body-parser module is used to read the request body of POST request. 
+
+### Running the application
+
+* For running/testing the code on docker, the mysql hostname in server/index.ts has to be replaced with the current hostname in running docker container.
+* The browser used for testing can use a plugin(e.g. Moesif Origin & CORS Changer) to allow to send cross-domain requests.
