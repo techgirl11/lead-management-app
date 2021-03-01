@@ -9,6 +9,7 @@ export const getUserData = async (status) => {
         }
       })
       .then(response => {
+        console.log(response);
         return response.data ;
       });
   };
