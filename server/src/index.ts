@@ -13,7 +13,7 @@ server.use((req, res, next) => {
 });
 
 const connection = mysql.createConnection({
-  host: '6df63889258c',
+  host: 'ee529c5a605b',
   user: 'root',
   password: 'hipages',
   database: 'hipages'
