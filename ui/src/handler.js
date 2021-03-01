@@ -5,7 +5,8 @@ export const getUserData = async (status) => {
     .get(`http://localhost:8080/getUsers/${status}`, {
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json"
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*"
         }
       })
       .then(response => {
@@ -22,7 +23,8 @@ export const getUserData = async (status) => {
         {
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json"
+            Accept: "application/json",
+            "Access-Control-Allow-Origin": "*"
           }
         }
       )
