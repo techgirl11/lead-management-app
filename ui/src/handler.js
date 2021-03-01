@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getUserData = async (status) => {
     return await axios
-    .get(`http://localhost:8081/getUsers/${status}`, {
+    .get(`http://localhost:8080/getUsers/${status}`, {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json"
@@ -16,7 +16,7 @@ export const getUserData = async (status) => {
   export const updateUserStatus = async (data) => {
     return await axios
       .post(
-        'http://localhost:8081/updateUser/',
+        'http://localhost:8080/updateUser/',
         data,
         {
           headers: {
