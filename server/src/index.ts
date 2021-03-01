@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 server.use(bodyParser.json());
 
 const connection = mysql.createConnection({
-  host: 'localhost:3306',
+  host: '6df63889258c',
   user: 'root',
   password: 'hipages',
   database: 'hipages'
