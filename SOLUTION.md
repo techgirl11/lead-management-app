@@ -5,9 +5,11 @@ Your Solution Documentation
 
 The frontend of the application resides in ui folder. The frontend has two tab components; The application fetches data from /getUsers Rest API created in the server directory of this project. The invited tab shows all the users with '**new**' status and accepted tab shows all the users with '**accepted**' status. On click of accept / decline button, the /updateUser Rest API is called that updates the status of a user to **accepted** / **declined**.
 
-The ui is built on react. The material-ui is used to create components like tabs, cards etc and material-ui icons for the various icons used in this project.
-Axios module is to make get and post api requests.
-Momentjs is used to format date in the project.
+The ui is built on react. React The material-ui is used to create components like tabs, cards etc and material-ui icons for the various icons used in this project.
+React lets us create simple as well as nested components. Material UI provides a rich set of components, it is a well maintained and robust library.
+Axios module is used to make get and post api requests. 
+Momentjs is used to format date in the project. This library makes working with dates and time very quick and easy. 
+
 
 ### Implementation of Backend:
 
@@ -20,6 +22,8 @@ The server application port was chnaged to 8081 for local development purpose.
 The backend is implemented in nodeJS with expressJS.
 Mysql module is used to interact with the mysql db provided with the boilerplate code.
 Body-parser module is used to read the request body of POST request. 
+
+Using the boiler plate code was the fastest way to implement the solution so I preferred it. The aim was to build an end to end working solution. Given more time, I would like to improve the UI. The data displayed within card components can be made prettier and I would like to show user a message on the action performed and then refresh tabs.
 
 ### Running the application
 
